@@ -8,6 +8,9 @@ const PORT = 1984;
 // connecting to local mongoDB database
 mongoose.connect('mongodb://localhost/games');
 
+// setting the view engine
+app.set('view engine', 'ejs');
+
 // GET request for the root
 app.get('/', gamesRouter);
 
