@@ -12,7 +12,7 @@ mongoose.connect('mongodb://localhost/games');
 app.set('view engine', 'ejs');
 
 // GET request for the root
-app.get('/', gamesRouter);
+app.use('/', gamesRouter);
 
 // starts the server on the specific port
 app.listen(PORT, () => {
