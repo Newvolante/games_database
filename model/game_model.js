@@ -7,15 +7,13 @@ const gameSchema = mongoose.Schema({
     required: true
   },
   genre: {
-    type: String,
+    type: String
   },
   shop: {
-    type: String,
-    required: true
+    type: String
   },
   completed: {
-    type: String,
-    required
+    type: String
   },
   link: {
     type: String
