@@ -21,8 +21,8 @@ app.use(express.urlencoded({
 // allows to use other methods with forms other than GET and POST
 app.use(methodOverride('_method'));
 
-// GET request for the root
-app.use('/', gamesRouter);
+// GET request for /games endpoint
+app.use('/games', gamesRouter);
 
 // starts the server on the specific port
 app.listen(PORT, () => {

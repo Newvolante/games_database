@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 // fields for each game entry
 const gameSchema = mongoose.Schema({
-  title: {
+  name: {
     type: String,
     required: true
   },

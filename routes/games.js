@@ -16,11 +16,11 @@ router.get('/new', (req, res) => {
 });
 
 // POST request to save the game in the database
-router.post('/articles', (req, res) => {
+router.post('/', (req, res) => {
   console.log('In post request');
     // creating a new article
     let newGame = new Game({
-      title: req.body.name,
+      name: req.body.name,
       shop: req.body.shop
     });
 
@@ -28,7 +28,7 @@ router.post('/articles', (req, res) => {
     newGame.save();
 
     // redirecting to root page
-    res.redirect('/');
+    res.redirect('/games');
 });
 
 module.exports = router;
