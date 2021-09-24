@@ -21,6 +21,7 @@ router.post('/', (req, res) => {
     // creating a new article
     let newGame = new Game({
       name: req.body.name,
+      genre: req.body.genre,
       shop: req.body.shop
     });
 
