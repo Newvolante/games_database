@@ -5,7 +5,7 @@ const router = express.Router();
 // GET request for the root page
 router.get('/', (req, res) => {
   console.log('requesting root page');
-  res.send('<h1>Root Page</h1>');
+  res.send('<h1>/Games Page</h1>');
 });
 
 // GET request for the "new game" page
@@ -28,7 +28,7 @@ router.post('/', (req, res) => {
     newGame.save();
 
     // redirecting to root page
-    res.redirect('/games');
+    res.redirect('/');
 });
 
 module.exports = router;
