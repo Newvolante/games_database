@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 
+const Game = require('./model/game_model');
 const gamesRouter = require('./routes/games');
 const app = express();
 const PORT = 1984;
@@ -20,6 +21,15 @@ app.use(express.urlencoded({
 
 // allows to use other methods with forms other than GET and POST
 app.use(methodOverride('_method'));
+
+// GET request for the root page
+app.get('/', async (req, res) => {
+  const games = await Game.find();
+
+  res.render('games/index', {
+    games: games
+  });
+});
 
 // GET request for /games endpoint
 app.use('/games', gamesRouter);
