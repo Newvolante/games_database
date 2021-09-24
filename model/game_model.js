@@ -10,7 +10,8 @@ const gameSchema = mongoose.Schema({
     type: String
   },
   shop: {
-    type: String
+    type: String,
+    required: true
   },
   completed: {
     type: String
