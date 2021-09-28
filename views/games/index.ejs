@@ -18,24 +18,22 @@
     <h1>Games available</h1>
 
     <!-- Add game button -->
-    <div>
-      <a href="/games/new" class="btn btn-outline-success mb-3">Add game</a>
+    <a href="/games/new" class="btn btn-outline-success mb-3">Add game</a>
 
+    <div>
       <!-- Iterating over the games in the database -->
       <% games.forEach( game => { %>
-
-      <div class="card">
-        <div class="card-body">
-          <h4 class="card-title"><%= game.name %></h4>
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title"><%= game.name %></h4>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Genre: <%= game.genre %></div>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Shop: <%= game.shop %></div>
+          </div>
         </div>
-        <div class="card-body">
-          <div class="card-title">Genre: <%= game.genre %></div>
-        </div>
-        <div class="card-body">
-          <div class="card-title">Shop: <%= game.shop %></div>
-        </div>
-      </div>
-
       <% }) %>
     </div>
   </div>
