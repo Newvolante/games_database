@@ -1,3 +1,4 @@
+const { application } = require('express');
 const express = require('express');
 const Game = require('./../model/game_model');
 const router = express.Router();
@@ -30,6 +31,12 @@ router.post('/', (req, res) => {
 
     // redirecting to root page
     res.redirect('/');
+});
+
+// PUT (edit) route
+router.put('/:id', (req, res) => {
+  res.send('<h1>in game route</h1>');
+  console.log('in game route');
 });
 
 module.exports = router;

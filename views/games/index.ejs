@@ -31,7 +31,9 @@
             <div class="card-title">Genre: <%= game.genre %></div>
             <!-- Game purchased from -->
             <div class="card-title">Shop: <%= game.shop %></div>
-        </div>
+            <!-- Edit button -->
+            <a href="/games/edit/<% game.id %>" class="btn btn-info">Edit</a>
+          </div>
       <% }) %>
     </div>
   </div>
