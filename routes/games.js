@@ -9,6 +9,11 @@ router.get('/', (req, res) => {
   res.send('<h1>/Games Page</h1>');
 });
 
+// GET request dor games/edit/:id
+router.get('/edit/:id', async (req, res) => {
+  res.send('<div>Game edit route</div>');
+});
+
 // GET request for the "new game" page
 router.get('/new', (req, res) => {
   console.log('Requesting new page');
@@ -34,9 +39,8 @@ router.post('/', (req, res) => {
 });
 
 // PUT (edit) route
-router.put('/:id', (req, res) => {
-  res.send('<h1>in game route</h1>');
-  console.log('in game route');
+router.put('/:id', async (req, res) => {
+  res.send(req.params.id);
 });
 
 module.exports = router;
