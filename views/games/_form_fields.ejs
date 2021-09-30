@@ -3,19 +3,19 @@
 <!-- Title field -->
 <div>
   <label for="name">Name</label>
-  <input type="text" name="name" id="name" required>
+  <input type="text" name="name" id="name" value="<%= game.name %>" required>
 </div>
 
 <!-- Tags field -->
 <div class="form-group">
   <label for="tags">Tags</label>
-  <input type="text" name="genre" id="tags">
+  <input type="text" name="genre" id="tags" value="<%= game.genre %>">
 </div>
 
 <!-- Shop field -->
 <div class="form-group">
   <label for="shop">Shop</label>
-  <input type="text" name="shop" id="shop" required>
+  <input type="text" name="shop" id="shop" required value="<%= game.shop %>">
 </div>
 
 <!-- Completed field -->

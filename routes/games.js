@@ -11,7 +11,12 @@ router.get('/', (req, res) => {
 
 // GET request dor games/edit/:id
 router.get('/edit/:id', async (req, res) => {
-  res.send('<div>Game edit route</div>');
+  let game = await Game.findById(req.params.id);
+
+  // res.send('<div>Game edit route</div>');
+  res.render('games/edit', {
+    game: game
+  });
 });
 
 // GET request for the "new game" page
