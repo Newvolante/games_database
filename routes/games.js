@@ -59,4 +59,12 @@ router.put('/:id', async (req, res) => {
   res.redirect('/');
 });
 
+// delete route
+router.delete('/:id', async (req, res) => {
+  let game = req.params.id;
+  console.log(game);
+  await Game.findByIdAndDelete(game);
+  res.redirect('/');
+});
+
 module.exports = router;
