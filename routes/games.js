@@ -38,7 +38,8 @@ router.post('/', (req, res) => {
     let newGame = new Game({
       name: req.body.name,
       genre: req.body.genre,
-      shop: req.body.shop
+      shop: req.body.shop,
+      completed: req.body.completed
     });
 
     //saving entry in the database
@@ -54,6 +55,7 @@ router.put('/:id', async (req, res) => {
   game.name = req.body.name;
   game.genre = req.body.genre;
   game.shop = req.body.shop;
+  game.completed = req.body.completed;
 
   await game.save();
   res.redirect('/');
